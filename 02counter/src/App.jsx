@@ -11,8 +11,8 @@ function App() {
   }
   const removevalue = () => {
     if(count===0){
-      alert("Value Cant be zero")
-      console.log("Value Cant be zero")
+      alert("Value Cant be less than zero")
+      console.log("Value Cant be less than zero")
     }
     else{
      setCount(count-1)
