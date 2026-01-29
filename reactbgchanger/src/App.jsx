@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [color, setColor] = useState('pink')
+  const [color, setColor] = useState('olive')
 
   return (
     <div className="h-screen w-full duration-200" style={{ backgroundColor: color }}>
@@ -24,6 +24,9 @@ function App() {
           </button>
           <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'yellow' }} onClick={() => setColor('yellow')}>
             Yellow
+          </button>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'purple' }} onClick={() => setColor('purple')}>
+            Purple
           </button>
         </div>
       </div>
