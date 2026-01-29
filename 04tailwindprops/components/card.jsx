@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-export default function Card2() {
+export default function Card2({username}) {
   return (
     <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100 p-8">
       <img
@@ -9,7 +9,7 @@ export default function Card2() {
       />
       <div className="flex flex-col justify-between p-6 space-y-8">
         <div className="space-y-2">
-          <h2 className="text-3xl font-semibold tracking-wide">Lorem</h2>
+          <h2 className="text-3xl font-semibold tracking-wide">{username}</h2>
           <p className="text-gray-400">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
             tempora ipsum soluta amet corporis accusantium aliquid consectetur

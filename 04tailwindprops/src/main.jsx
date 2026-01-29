@@ -6,6 +6,7 @@ import Card from '/Users/vanshikavats/Desktop/react learn/04tailwindprops/compon
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Card />
+    <Card username="John Doe" />
+    <Card username="Jane Smith" />
   </StrictMode>,
 )
