@@ -10,14 +10,20 @@ function App() {
     <div className="h-screen w-full duration-200" style={{ backgroundColor: color }}>
       <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
         <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-3 rounded-3xl">
-          <button onClick={() => setColor('blue')}>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'pink' }} onClick={() => setColor('pink')}>
+            Pink
+          </button>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'blue' }} onClick={() => setColor('blue')}>
             Blue
           </button>
-          <button onClick={() => setColor('red')}>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'red' }} onClick={() => setColor('red')}>
             Red
           </button>
-          <button onClick={() => setColor('green')}>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'green' }} onClick={() => setColor('green')}>
             Green
+          </button>
+          <button className='outline-none px-4 rounded-3xl' style={{ backgroundColor: 'yellow' }} onClick={() => setColor('yellow')}>
+            Yellow
           </button>
         </div>
       </div>
