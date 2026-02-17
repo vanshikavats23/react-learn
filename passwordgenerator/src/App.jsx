@@ -13,6 +13,10 @@ const passwordgenerator = useCallback(()=>{
 
   let pass="";
   let string="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  if (numberallowed){
+    string+="0123456789";
+  }
+  if(charallowed) string+="`~[]{}+=_-;:.,";
   
 },[length,numberallowed,charallowed,setPassword]);
   return (
