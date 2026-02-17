@@ -9,10 +9,10 @@ function App() {
   const [charallowed, setCharallowed] = useState(false);
 const [Password, setPassword] = useState('');
 
-const passwordgenerator = useCallback(fn,[length,numberallowed,charallowed,setPassword]);
+const passwordgenerator = useCallback(()=>{},[length,numberallowed,charallowed,setPassword]);
   return (
     <>
-      <h1 className="text-4xl text-center font-bold text-white-400">Password Generator</h1>
+      <h1 className="text-4xl text-center font-bold">Password Generator</h1>
     </>
   )
 }
