@@ -16,8 +16,14 @@ const passwordgenerator = useCallback(()=>{
   if (numberallowed){
     string+="0123456789";
   }
-  if(charallowed) string+="`~[]{}+=_-;:.,";
-  
+  if(charallowed) string+="`~[]{}+=_-;:.,@#$%^&*()?/|";
+  for (let i = 1; i <= array.length; i++) {
+    const char= Math.floor(Math.random * string.length+1);
+    pass= string.charAt(char);
+
+  }
+  setPassword(pass);
+
 },[length,numberallowed,charallowed,setPassword]);
   return (
     <>
