@@ -47,6 +47,23 @@ const passwordgenerator = useCallback(()=>{
           />
           <label>Length: {length}</label>
         </div>
+        <div className='flex items-center mt-2'>
+          <input 
+          type="checkbox"
+          id='numbers'
+          className='mr-2'
+          />
+          <label htmlFor='numbers' className='text-sm'>Include Numbers</label>
+        </div>
+        <div className='flex items-center mt-2'>
+          <input 
+          type="checkbox"
+          id='characters'
+          className='mr-2'
+           />
+          <label htmlFor='characters' className='text-sm'>Include Special Characters</label>
+
+        </div>
       </div>
 
     </>
