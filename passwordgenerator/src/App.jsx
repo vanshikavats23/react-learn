@@ -44,6 +44,7 @@ const passwordgenerator = useCallback(()=>{
           min={6}
           max={32}
           className='slider'
+          onChange={(e)=>setLength(e.target.value)}
           />
           <label>Length: {length}</label>
         </div>
@@ -52,6 +53,7 @@ const passwordgenerator = useCallback(()=>{
           type="checkbox"
           id='numbers'
           className='mr-2'
+          onChange={(e)=>setNumberallowed(e.target.checked)}      
           />
           <label htmlFor='numbers' className='text-sm'>Include Numbers</label>
         </div>
@@ -60,6 +62,7 @@ const passwordgenerator = useCallback(()=>{
           type="checkbox"
           id='characters'
           className='mr-2'
+          onChange={(e)=>setCharallowed(e.target.checked)}
            />
           <label htmlFor='characters' className='text-sm'>Include Special Characters</label>
 
