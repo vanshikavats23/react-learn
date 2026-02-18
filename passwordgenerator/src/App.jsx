@@ -53,7 +53,11 @@ const passwordgenerator = useCallback(()=>{
           type="checkbox"
           id='numbers'
           className='mr-2'
-          onChange={(e)=>setNumberallowed(e.target.checked)}      
+          onChange={
+            ()=>{
+              setNumberallowed(prev=>!prev);
+            }
+          } 
           />
           <label htmlFor='numbers' className='text-sm'>Include Numbers</label>
         </div>
@@ -62,7 +66,11 @@ const passwordgenerator = useCallback(()=>{
           type="checkbox"
           id='characters'
           className='mr-2'
-          onChange={(e)=>setCharallowed(e.target.checked)}
+          onChange={
+            ()=>{
+              setCharallowed(prev=>!prev);
+            }
+          }
            />
           <label htmlFor='characters' className='text-sm'>Include Special Characters</label>
 
