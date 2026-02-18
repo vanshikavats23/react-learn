@@ -18,16 +18,37 @@ const passwordgenerator = useCallback(()=>{
   }
   if(charallowed) string+="`~[]{}+=_-;:.,@#$%^&*()?/|";
   for (let i = 1; i <= array.length; i++) {
-    const char= Math.floor(Math.random * string.length+1);
+    const char= Math.floor(Math.random() * string.length+1);
     pass= string.charAt(char);
 
   }
   setPassword(pass);
 
-},[length,numberallowed,charallowed,setPassword]);
+ },[length,numberallowed,charallowed,setPassword]);
   return (
     <>
       <h1 className="text-4xl text-center font-bold">Password Generator</h1>
+    <div className='flex shadow rounded-lg overflow-hidden mb-4'>
+      <input type="text" 
+      value={Password}
+      className='flex-1 bg-gray-200 text-gray-700 p-2 text-center text-lg font-mono' 
+      readOnly
+       />
+      <button className='bg-blue-500 text-white px-4 py-2'>Generate</button>
+      
+    </div>
+      <div className='flex flex-col p-4'>
+        <div className='flex justify-between text-sm'>
+          <input 
+          type="range"
+          min={6}
+          max={32}
+          className='slider'
+          />
+          <label>Length: {length}</label>
+        </div>
+      </div>
+
     </>
   )
 }
