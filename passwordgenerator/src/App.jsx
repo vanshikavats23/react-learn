@@ -1,4 +1,4 @@
-import { useState , useCallback} from 'react'
+import { useState , useCallback, useEffect, use} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -17,14 +17,19 @@ const passwordgenerator = useCallback(()=>{
     string+="0123456789";
   }
   if(charallowed) string+="`~[]{}+=_-;:.,@#$%^&*()?/|";
-  for (let i = 1; i <= array.length; i++) {
+  for (let i = 1; i <= length; i++) {
     const char= Math.floor(Math.random() * string.length+1);
-    pass= string.charAt(char);
+    pass += string.charAt(char);
 
   }
   setPassword(pass);
 
  },[length,numberallowed,charallowed,setPassword]);
+
+ useEffect(()=>{
+   passwordgenerator();
+ },[length,numberallowed,charallowed,passwordgenerator]);
+
   return (
     <>
       <h1 className="text-4xl text-center font-bold">Password Generator</h1>
